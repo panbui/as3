@@ -285,7 +285,10 @@ int main(  int argc, char** argv ) {
 		if (dist < radius[i] + 5) {
 			i++;
 		}
-
+		if (i == 5) {
+			cout<<"WIN!"<<endl;
+			break;
+		}
 		circle (game, Point(xCOM, yCOM), life, Scalar (0,0, 255), 3);
 		circle (frame, Point(xCOM, yCOM), life, Scalar (0,0, 255), 3);
 		if (available) {
@@ -301,7 +304,7 @@ int main(  int argc, char** argv ) {
 			break;
 		}
 	}
-
+	cout<<"Score: "<< i <<endl;
 	printf("Final frameCount = %d \n", frameCount);
 	return 0;
 }
